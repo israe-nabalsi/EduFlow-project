@@ -1,0 +1,141 @@
+.grades-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  font-family: sans-serif;
+}
+
+.grades-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 2rem;
+  color: #2d3436;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  color: #0984e3;
+}
+
+.add-grade-btn {
+  background: #0984e3;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s;
+}
+
+.add-grade-btn:hover {
+  background-color: #086dc5;
+}
+
+.new-grade-form {
+  background: white;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+}
+
+.new-grade-form div {
+  margin-bottom: 1rem;
+}
+
+.new-grade-form input,
+.new-grade-form textarea {
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.new-grade-form button {
+  background: #27ae60;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.grades-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grade-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grade-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.grade-card h3 {
+  margin: 0 0 0.5rem;
+  color: #0984e3;
+}
+
+.grade-score {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2d3436;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0984e3;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content p {
+  margin: 0.8rem 0;
+}
