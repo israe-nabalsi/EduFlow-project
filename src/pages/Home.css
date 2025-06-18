@@ -1,0 +1,1021 @@
+/* Home Container */
+.home-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Welcome Section */
+.welcome-section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+body.dark .welcome-section {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-content {
+  flex: 1;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  color: #1e293b;
+  line-height: 1.2;
+}
+
+body.dark .welcome-title {
+  color: #f1f5f9;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.dark .highlight {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcome-subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin: 0;
+  font-weight: 400;
+}
+
+body.dark .welcome-subtitle {
+  color: #94a3b8;
+}
+
+.quick-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+
+  align-items: center;
+  gap: 15px;
+  min-width: 140px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .stat-card {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark .stat-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.stat-icon {
+  font-size: 1.5rem;
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 12px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark .stat-icon {
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.1);
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1;
+}
+
+body.dark .stat-number {
+  color: #f1f5f9;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+body.dark .stat-label {
+  color: #94a3b8;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+body.dark .dashboard-card {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .dashboard-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card-header {
+  padding: 25px 30px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+}
+
+body.dark .card-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.05) 0%, rgba(167, 139, 250, 0.05) 100%);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1e293b;
+}
+
+body.dark .card-title {
+  color: #f1f5f9;
+}
+
+.card-icon {
+  color: #667eea;
+  font-size: 1.2rem;
+}
+
+body.dark .card-icon {
+  color: #60a5fa;
+}
+
+.card-content {
+  padding: 25px 30px 30px;
+}
+
+/* Add Button */
+.add-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.add-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+body.dark .add-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
+
+/* Task Count Badge */
+.task-count {
+  background: #ef4444;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Grade Average */
+.grade-average {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 8px 12px;
+  border-radius: 20px;
+  color: #10b981;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.trend-icon {
+  font-size: 0.8rem;
+}
+
+.trend-icon.positive {
+  color: #10b981;
+}
+
+.trend-icon.negative {
+  color: #ef4444;
+}
+
+/* Notification Badge */
+.notification-badge {
+  background: #f59e0b;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Modules List */
+.modules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.module-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 15px;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  transition: all 0.3s ease;
+}
+
+.module-item:hover {
+  background: rgba(102, 126, 234, 0.05);
+  border-color: #667eea;
+}
+
+body.dark .module-item {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(71, 85, 105, 0.5);
+}
+
+body.dark .module-item:hover {
+  background: rgba(96, 165, 250, 0.05);
+  border-color: #60a5fa;
+}
+
+.module-info {
+  flex: 1;
+}
+
+.module-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  color: #1e293b;
+}
+
+body.dark .module-name {
+  color: #f1f5f9;
+}
+
+.module-date {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+}
+
+body.dark .module-date {
+  color: #94a3b8;
+}
+
+.progress-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 120px;
+}
+
+.progress-bar {
+  width: 80px;
+  height: 8px;
+  background: rgba(203, 213, 225, 0.5);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+body.dark .progress-bar {
+  background: rgba(71, 85, 105, 0.5);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+body.dark .progress-fill {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e293b;
+  min-width: 35px;
+}
+
+body.dark .progress-text {
+  color: #f1f5f9;
+}
+
+/* Tasks List */
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 12px;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  transition: all 0.3s ease;
+}
+
+.task-item:hover {
+  background: rgba(102, 126, 234, 0.05);
+  border-color: #667eea;
+}
+
+body.dark .task-item {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(71, 85, 105, 0.5);
+}
+
+body.dark .task-item:hover {
+  background: rgba(96, 165, 250, 0.05);
+  border-color: #60a5fa;
+}
+
+.task-info {
+  flex: 1;
+}
+
+.task-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  color: #1e293b;
+}
+
+body.dark .task-name {
+  color: #f1f5f9;
+}
+
+.task-due {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+}
+
+body.dark .task-due {
+  color: #94a3b8;
+}
+
+.task-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.priority-badge {
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.status-indicator.pending {
+  background: #f59e0b;
+}
+
+.status-indicator.in-progress {
+  background: #3b82f6;
+}
+
+.status-indicator.completed {
+  background: #10b981;
+}
+
+/* Exams List */
+.exams-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.exam-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 12px;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  transition: all 0.3s ease;
+}
+
+.exam-item:hover {
+  background: rgba(239, 68, 68, 0.05);
+  border-color: #ef4444;
+}
+
+body.dark .exam-item {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(71, 85, 105, 0.5);
+}
+
+body.dark .exam-item:hover {
+  background: rgba(239, 68, 68, 0.05);
+  border-color: #ef4444;
+}
+
+.exam-info {
+  flex: 1;
+}
+
+.exam-subject {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #1e293b;
+}
+
+body.dark .exam-subject {
+  color: #f1f5f9;
+}
+
+.exam-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.exam-date,
+.exam-time {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+body.dark .exam-date,
+body.dark .exam-time {
+  color: #94a3b8;
+}
+
+.exam-countdown {
+  color: #ef4444;
+  font-size: 1.2rem;
+}
+
+.countdown-icon {
+  animation: pulse 2s infinite;
+}
+
+/* Grades List */
+.grades-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.grade-item {
+  padding: 18px;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 12px;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  transition: all 0.3s ease;
+}
+
+.grade-item:hover {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: #10b981;
+}
+
+body.dark .grade-item {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(71, 85, 105, 0.5);
+}
+
+body.dark .grade-item:hover {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: #10b981;
+}
+
+.grade-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.grade-subject {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #1e293b;
+}
+
+body.dark .grade-subject {
+  color: #f1f5f9;
+}
+
+.grade-score {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.grade-letter {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.grade-percentage {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+body.dark .grade-percentage {
+  color: #94a3b8;
+}
+
+.grade-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(203, 213, 225, 0.5);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+body.dark .grade-bar {
+  background: rgba(71, 85, 105, 0.5);
+}
+
+.grade-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Announcements List */
+.announcements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.announcement-item {
+  display: flex;
+  gap: 15px;
+  padding: 18px;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 12px;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  transition: all 0.3s ease;
+}
+
+.announcement-item:hover {
+  background: rgba(59, 130, 246, 0.05);
+  border-color: #3b82f6;
+}
+
+body.dark .announcement-item {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(71, 85, 105, 0.5);
+}
+
+body.dark .announcement-item:hover {
+  background: rgba(59, 130, 246, 0.05);
+  border-color: #3b82f6;
+}
+
+.announcement-type {
+  width: 4px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.announcement-type.update {
+  background: #3b82f6;
+}
+
+.announcement-type.important {
+  background: #ef4444;
+}
+
+.announcement-type.info {
+  background: #10b981;
+}
+
+.announcement-content {
+  flex: 1;
+}
+
+.announcement-message {
+  font-size: 0.95rem;
+  color: #1e293b;
+  margin: 0 0 5px 0;
+  font-weight: 500;
+}
+
+body.dark .announcement-message {
+  color: #f1f5f9;
+}
+
+.announcement-date {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+body.dark .announcement-date {
+  color: #94a3b8;
+}
+
+/* Events List */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.event-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 12px;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  transition: all 0.3s ease;
+}
+
+.event-item:hover {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: #10b981;
+}
+
+body.dark .event-item {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(71, 85, 105, 0.5);
+}
+
+body.dark .event-item:hover {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: #10b981;
+}
+
+.event-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.event-indicator.workshop {
+  background: #3b82f6;
+}
+
+.event-indicator.meeting {
+  background: #f59e0b;
+}
+
+.event-indicator.lecture {
+  background: #10b981;
+}
+
+.event-info {
+  flex: 1;
+}
+
+.event-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  color: #1e293b;
+}
+
+body.dark .event-title {
+  color: #f1f5f9;
+}
+
+.event-date {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+}
+
+body.dark .event-date {
+  color: #94a3b8;
+}
+
+.event-type-badge {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+body.dark .event-type-badge {
+  background: rgba(96, 165, 250, 0.1);
+  color: #60a5fa;
+}
+
+/* Calendar Styles */
+.calendar-card {
+  grid-column: span 2;
+}
+
+.calendar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modern-calendar {
+  border: none !important;
+  width: 100% !important;
+  background: transparent !important;
+  font-family: inherit !important;
+}
+
+.react-calendar__tile {
+  border-radius: 8px !important;
+  border: none !important;
+  background: none !important;
+  color: inherit !important;
+  padding: 12px 8px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+.react-calendar__tile:hover {
+  background: rgba(102, 126, 234, 0.1) !important;
+}
+
+.react-calendar{
+  width: 100% !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(226, 232, 240, 0.1) !important;
+}
+
+.react-calendar__navigation__label {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+}
+
+body.dark .react-calendar__navigation__label {
+  color: #f1f5f9 !important;
+}
+
+.react-calendar__navigation__arrow {
+  color: #64748b !important;
+}
+
+body.dark .react-calendar__navigation__arrow {
+  color: #94a3b8 !important;
+}
+
+.react-calendar__tile--active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important; 
+}
+
+
+
+body.dark .react-calendar__tile--active {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%) !important;
+  color: white !important; 
+}
+body.dark .react-calendar__tile--active:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%) !important;
+  color: white !important;
+}
+
+.react-calendar__tile--now {
+  background: rgba(102, 126, 234, 0.2) !important;
+  color: #1e293b !important;
+}
+
+.react-calendar__tile--now:hover {
+  background: rgba(102, 126, 234, 0.3) !important;
+  color: #1e293b !important;
+}
+
+body.dark .react-calendar__tile--now {
+  background: rgba(96, 165, 250, 0.2) !important;
+  color: #f1f5f9 !important;
+}
+body.dark .react-calendar__tile--now:hover {
+  background: rgba(96, 165, 250, 0.3) !important;
+  color: #f1f5f9 !important;
+}
+
+.react-calendar__tile--hasActive {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+} 
+
+body.dark .react-calendar__tile--hasActive:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%) !important;
+  color: white !important;
+}
+.react-calendar__tile--hasActive:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+}
+body.dark .react-calendar__tile--hasActive {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%) !important;
+  color: white !important;
+}
+body.dark .react-calendar__tile--hasActive:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%) !important;
+  color: white !important;
+}
+.react-calendar__tile--active:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+}
+body.dark .react-calendar__tile--active:hover {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%) !important;
+  color: white !important;
+}
+.react-calendar__tile--active:disabled {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+}
+body.dark .react-calendar__tile--active:disabled {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%) !important;
+  color: white !important;
+}
+.react-calendar__tile--active:disabled:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%) !important;
+  color: white !important;
+}
+body.dark .react-calendar__tile--active:disabled:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%) !important;
+  color: white !important;
+}
+.react-calendar__tile--now:disabled {
+  background: rgba(102, 126, 234, 0.2) !important;
+  color: #1e293b !important;
+}
+body.dark .react-calendar__tile--now:disabled {
+  background: rgba(96, 165, 250, 0.2) !important;
+  color: #f1f5f9 !important;
+}
+.react-calendar__tile--now:disabled:hover {
+  background: rgba(102, 126, 234, 0.3) !important;
+  color: #1e293b !important;
+}
+body.dark .react-calendar__tile--now:disabled:hover {
+  background: rgba(96, 165, 250, 0.3) !important;
+  color: #f1f5f9 !important;
+}
+
+.react-calendar__tile--hasActive:disabled {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+}
+body.dark .react-calendar__tile--hasActive:disabled {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%) !important;
+  color: white !important;
+}
+body.dark .react-calendar__tile--hasActive:disabled {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%) !important;
+  color: white !important;
+}
+.react-calendar__tile--hasActive:disabled {  
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+}
+body.dark .react-calendar__tile--hasActive:disabled {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%) !important;
+  color: white !important;
+}
+body.dark .react-calendar__tile--hasActive:disabled:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%) !important;
+  color: white !important;
+} 
+.react-calendar__tile--hasActive:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+}
+body.dark .react-calendar__tile--hasActive:hover {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%) !important;
+  color: white !important;
+}body.dark .react-calendar__tile--hasActive:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%) !important;
+  color: white !important;
+}
+
+@media (max-width: 900px) {
+  .quick-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .stat-card {
+    width: 100%;
+  }
+}
