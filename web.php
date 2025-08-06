@@ -3,6 +3,8 @@
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth; // <— Ajouté
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\DB;
 
 Route::get('/test-db', function () {
@@ -27,7 +29,23 @@ Route::get('/forgot-password', [AuthController::class, 'forgotPasswordForm'])->n
 Route::post('/forgot-password', [AuthController::class, 'sendResetLink'])->name('password.email');
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('auth')->name('dashboard');
+Route::middleware('auth')->get('/dashboard', function () {
+    $user = Auth::user();
 
+    if ($user && $user->role === 'admin') {
+        $users = User::all();
+        return view('dashboard.admin', compact('users'));
+    }
+
+    return view('dashboard.user');
+})->name('dashboard');
+
+
+Route::middleware(['auth', 'can:isAdmin'])
+      ->prefix('admin/users')
+      ->name('admin.users.')
+      ->group(function () {
+          Route::get('{user}/edit',  [UserController::class, 'edit'])->name('edit');
+          Route::put('{user}',       [UserController::class, 'update'])->name('update');
+          Route::delete('{user}',    [UserController::class, 'destroy'])->name('destroy');
+      });
